@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business logIn page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsivness.css">
+</head>
+<body>
+
+
+   <!-- sctions -->
+    <header class="header" id="Header">
+        <div class="left">
+            <div class="logo">
+             <img src="public/images/logo.png" width="30" alt="logo img">
+                  <a href="/"> <h3>Eovaset</h3></a>
+            </div>
+
+            <!-- normal navbar  -->
+            
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#service">Service </a></li>
+                    <li><a href="#customers">Customers</a></li>
+                    <li><a href="#price">Price</a></li>
+                    <li><a href="#learn">Learn More</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="btns" id="btns">
+            <a href="/login.html"><button class="btn-1">LogIn</button></a>
+            <a href="/signup.html"><button class="btn-2">Sign Up</button></a>
+        </div>
+
+        <!-- sidebar for small screens with menu -->
+         <button  class="menu-icon" id="menu-show">
+            <img src="public/svgs/menu-svg.svg" alt="menu Icon">
+         </button>
+        <div class="sidebar" id="Sidebar">
+            <nav class="sidebar-nav" id="Sidebar-nav">
+                <button class="cross" id="hideMenu">
+                <img  src="public/svgs/cross-svg.svg" alt="">
+                </button>
+                <ul>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#customers">Customers</a></li>
+                    <li><a href="#price">Price</a></li>
+                    <li><a href="#learn">Learn More</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-btns" id="sidebar-btns">
+                <a href="/login.html"><button class="btn-1">LogIn</button></a>
+                <a href="/signup.html"><button class="btn-2">Sign Up</button></a>
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+
+<section class="login auth-main">
+<div class="auth-box">
+  <h2>Welcome Back</h2>
+  <p>Login to your account</p>
+
+  <form>
+    <input type="email" placeholder="Email Address" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <span>Don’t have an account? <a href="signup.html">Sign up</a></span>
+</div>
+</section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
