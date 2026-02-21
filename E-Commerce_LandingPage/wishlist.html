@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WishList</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+    <!-- header -->
+    <header>
+        <div class="left">
+            <img src="/public/icones/sneaker.png" width="60" alt="logo">
+            <a href="/index.html">
+                <h2>Sport<span>X</span></h2>
+            </a>
+        </div>
+
+        <div class="right header-menu">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sec6">Collection</a></li>
+                    <li><a href="#sec2">Best Sellers</a></li>
+                    <li><a href="#sec-4">Fit Guide</a></li>
+                    <li><a href="#sec5">New Drops</a></li>
+                    <li><a href="/wishlist.html">
+                            <img src="/public/icones/wishlist.svg" width="30" alt="">
+                        </a></li>
+                    <li><a href=""><img src="/public/icones/search.svg" width="30" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+      <!-- menu and sidebar  -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#6CA651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+        <div class="sidebar-menu" id="mobileSidebar">
+            <div class="cross-icon" onclick="toggleMenu()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#6CA651"></path> </g></svg>
+            </div>
+                <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sec6">Collection</a></li>
+                    <li><a href="#sec2">Best Sellers</a></li>
+                    <li><a href="#sec-4">Fit Guide</a></li>
+                    <li><a href="#sec5">New Drops</a></li>
+                    <li><a href="/wishlist.html">
+                            <img src="/public/icones/wishlist.svg" width="30" alt="">
+                        </a></li>
+                    <li><a href=""><img src="/public/icones/search.svg" width="30" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+    <!-- Product lists for order  -->
+
+    <section class="sec7">
+        <div class="sec7-main">
+            <h2>SaveList</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        Products
+                    </div>
+                    <div class="col">
+                        price
+                    </div>
+                    <div class="col">
+                        Quality
+                    </div>
+                    <div class="col">
+                        Remove
+                    </div>
+                </div>
+            </div>
+
+   
+
+        </div>
+    </section>
+
+
+
+
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/product.js"></script>
+    <script src="/scripts/wishlist.js"></script>
+
+</body>
+
+</html>

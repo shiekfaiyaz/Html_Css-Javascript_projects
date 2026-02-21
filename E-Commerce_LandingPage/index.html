@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-SportX</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="left">
+            <img src="/public/icones/sneaker.png" width="60" alt="logo">
+            <a href="/index.html">
+                <h2>Sport<span>X</span></h2>
+            </a>
+        </div>
+
+        <div class="right header-menu">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sec6">Collection</a></li>
+                    <li><a href="#sec2">Best Sellers</a></li>
+                    <li><a href="#sec-4">Fit Guide</a></li>
+                    <li><a href="#sec5">New Drops</a></li>
+                    <li><a href="/wishlist.html">
+                            <img src="/public/icones/wishlist.svg" width="30" alt="">
+                        </a></li>
+                    <li><a href=""><img src="/public/icones/search.svg" width="30" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+      <!-- menu and sidebar  -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#6CA651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+        <div class="sidebar-menu" id="mobileSidebar">
+            <div class="cross-icon" onclick="toggleMenu()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#6CA651"></path> </g></svg>
+            </div>
+                <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sec6">Collection</a></li>
+                    <li><a href="#sec2">Best Sellers</a></li>
+                    <li><a href="#sec-4">Fit Guide</a></li>
+                    <li><a href="#sec5">New Drops</a></li>
+                    <li><a href="/wishlist.html">
+                            <img src="/public/icones/wishlist.svg" width="30" alt="">
+                        </a></li>
+                    <li><a href=""><img src="/public/icones/search.svg" width="30" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+
+    <!-- section-1 home -->
+    <section class="sec1" id="home">
+        <div class="sec1-main">
+            <img src="/public/images/home-img.jpg" alt="Home bg images" width="500">
+            <div class="sec1-content">
+                <h1>Dominate Your Limits.</h1>
+                <p>High-performance gear engineered for those who never stop moving. Gear up with SportX.</p>
+                <div class="sec1-btns">
+                    <button id="jumpBtn">Shop Now</button>
+                    <button class="btn2">Best Prices</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- section-2 slider products -->
+    <section class="sec2" id="sec2">
+        <div class="sec2-slider" id="wrapper">
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Air Max Pro Edition.</h2>
+                    <h3>Step into the future of performance and comfort.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-shoe.png" alt="">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="0">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Elite Team Apparel</h2>
+                    <h3>Lightweight fabric designed for the ultimate athlete.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-jersey.png" alt="Jersey Image">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="1">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Endurance Gym Bag</h2>
+                    <h3>Carry your gear in style with waterproof tech.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-bag.png" alt="Bag Image">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="2">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Urban Street Fit</h2>
+                    <h3>Stay warm and stylish during your outdoor training.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-hoodie.png" alt="Hoodie Image">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="3">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Match-Day Official</h2>
+                    <h3>Precision engineered for perfect flight and grip.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-ball.png" alt="">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="4">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-1">
+                <div class="slider-tittle">
+                    <h2>Sport Track Pro</h2>
+                    <h3>Monitor your heart rate and hustle in real-time.</h3>
+                </div>
+                <div class="slider-img">
+                    <img src="/public/images/slider-watch.png" alt="Watch Image">
+                </div>
+                <div class="review-btn">
+                    <div class="product-start">⭐ 4.9 (2k+ Reviews)</div>
+                    <div class="text">Biggest Discounts and offers</div>
+                    <div class="viewMore-btn">
+                        <button class="view-more">View More</button>
+                        <button class="buy-now btn2" data-index="5">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="prev btn2" id="prev-btn">prev</button>
+
+        <button class="next btn2" id="next-btn">Next</button>
+    </section>
+
+
+    <!-- section-3 product show case and infor -->
+    <section class="sec3" id="sec3">
+        <div class="sec3-main">
+            <div class="sec3-left">
+                <div class="product-img">
+                    <img class="p-img" src="/public/images/slider-shoe.png" width="300" alt="product Image">
+                </div>
+                <div class="product-colors">
+                    <div class="color1">🟥</div>
+                    <div class="color1">🟩</div>
+                    <div class="color1">🟨</div>
+                </div>
+                <div class="product-size">
+                    <div class="size1">S</div>
+                    <div class="size1">M</div>
+                    <div class="size1">Xl</div>
+                </div>
+            </div>
+
+            <div class="sec3-right">
+                <div class="prodcut-tittle">
+                    <h2 class="p-tittle">The Product Tittle</h2>
+                </div>
+                <div class="price-rating">
+                    <h3 class="p-price">$ 10</h3>
+                    <p class="p-reviews">4.5⭐⭐⭐⭐</p>
+                </div>
+                <div class="product-btns">
+                    <button class="buy-btn">Buy Now</button>
+                    <button class="heart-icon btn2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="product-desc">
+                    <p class="p-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iusto quis, quod qui molestiae voluptatibus aspernatur
+                        doloribus harum necessitatibus pariatur assumenda.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- section-4 Fetures -->
+    <section class="sec4" id="sec-4">
+        <h2>Why Choose SportX?</h2>
+        <div class="sec4-main">
+            <div class="point1">
+                <svg viewBox="0 0 1024 1024" fill="#A8DF8E" width="100" class="icon" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" stroke="#A8DF8E">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M678.584675 765.172506v157.995691l75.697852 31.505938V723.768586a429.379161 429.379161 0 0 1-75.697852 41.40392zM269.717473 723.768586V953.098138l75.697852-31.505938v-156.419694a429.309162 429.309162 0 0 1-75.697852-41.40392zM511.999 798.78444a428.955162 428.955162 0 0 1-105.993793-13.241974v238.457534L511.999 979.886086 617.992793 1023.998V785.542466A429.025162 429.025162 0 0 1 511.999 798.78444zM511.999 0C308.479398 0 142.903721 165.575677 142.903721 369.097279S308.479398 738.192558 511.999 738.192558s369.097279-165.575677 369.097279-369.097279S715.520602 0 511.999 0z m0 660.198711c-161.345685 0-292.611428-131.265744-292.611428-292.611429 0-161.347685 131.265744-292.613428 292.611428-292.613428s292.611428 131.265744 292.611428 292.613428c0 161.347685-131.263744 292.611428-292.611428 292.611429zM511.999 135.563735c-127.93575 0-232.021547 104.083797-232.021547 232.023547S384.06325 599.606829 511.999 599.606829s232.021547-104.083797 232.021547-232.021547c0-127.93775-104.083797-232.021547-232.021547-232.021547zM607.360814 502.999018L511.999 452.865115 416.639186 502.999018l18.211965-106.183793-77.14785-75.199853 106.617792-15.49397L511.999 209.509591l47.679907 96.611811 106.617792 15.49397-77.14785 75.199853 18.211965 106.183793z">
+                        </path>
+                    </g>
+                </svg>
+                <h2>Premium Quality</h2>
+                <p>Crafted with high-performance, durable materials for athletes.</p>
+            </div>
+            <div class="point1">
+                <svg viewBox="0 0 24 24" fill="none" width="100" xmlns="http://www.w3.org/2000/svg" stroke="#A8DF8E">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M11.2691 4.41115C11.5006 3.89177 11.6164 3.63208 11.7776 3.55211C11.9176 3.48263 12.082 3.48263 12.222 3.55211C12.3832 3.63208 12.499 3.89177 12.7305 4.41115L14.5745 8.54808C14.643 8.70162 14.6772 8.77839 14.7302 8.83718C14.777 8.8892 14.8343 8.93081 14.8982 8.95929C14.9705 8.99149 15.0541 9.00031 15.2213 9.01795L19.7256 9.49336C20.2911 9.55304 20.5738 9.58288 20.6997 9.71147C20.809 9.82316 20.8598 9.97956 20.837 10.1342C20.8108 10.3122 20.5996 10.5025 20.1772 10.8832L16.8125 13.9154C16.6877 14.0279 16.6252 14.0842 16.5857 14.1527C16.5507 14.2134 16.5288 14.2807 16.5215 14.3503C16.5132 14.429 16.5306 14.5112 16.5655 14.6757L17.5053 19.1064C17.6233 19.6627 17.6823 19.9408 17.5989 20.1002C17.5264 20.2388 17.3934 20.3354 17.2393 20.3615C17.0619 20.3915 16.8156 20.2495 16.323 19.9654L12.3995 17.7024C12.2539 17.6184 12.1811 17.5765 12.1037 17.56C12.0352 17.5455 11.9644 17.5455 11.8959 17.56C11.8185 17.5765 11.7457 17.6184 11.6001 17.7024L7.67662 19.9654C7.18404 20.2495 6.93775 20.3915 6.76034 20.3615C6.60623 20.3354 6.47319 20.2388 6.40075 20.1002C6.31736 19.9408 6.37635 19.6627 6.49434 19.1064L7.4341 14.6757C7.46898 14.5112 7.48642 14.429 7.47814 14.3503C7.47081 14.2807 7.44894 14.2134 7.41394 14.1527C7.37439 14.0842 7.31195 14.0279 7.18708 13.9154L3.82246 10.8832C3.40005 10.5025 3.18884 10.3122 3.16258 10.1342C3.13978 9.97956 3.19059 9.82316 3.29993 9.71147C3.42581 9.58288 3.70856 9.55304 4.27406 9.49336L8.77835 9.01795C8.94553 9.00031 9.02911 8.99149 9.10139 8.95929C9.16534 8.93081 9.2226 8.8892 9.26946 8.83718C9.32241 8.77839 9.35663 8.70162 9.42508 8.54808L11.2691 4.41115Z"
+                            stroke="#A8DF8E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </svg>
+                <h2>5-Star Rated</h2>
+                <p>Trusted by 50,000+ athletes with a 4.9/5 global rating.</p>
+            </div>
+            <div class="point1">
+                <svg viewBox="0 0 24 24" width="100" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#A8DF8E">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M9.56443 8.73049L10.0789 10.5926C10.5639 12.3481 10.8064 13.2259 11.5194 13.6252C12.2323 14.0244 13.1374 13.7892 14.9474 13.3188L16.8673 12.8199C18.6774 12.3495 19.5824 12.1143 19.9941 11.4227C20.4057 10.7312 20.1632 9.85344 19.6782 8.09788L19.1638 6.2358C18.6788 4.48023 18.4363 3.60244 17.7233 3.20319C17.0103 2.80394 16.1052 3.03915 14.2952 3.50955L12.3753 4.00849C10.5652 4.47889 9.66021 4.71409 9.24856 5.40562C8.83692 6.09714 9.07943 6.97493 9.56443 8.73049Z"
+                            fill="#A8DF8E"></path>
+                        <path
+                            d="M2.27749 5.24694C2.38823 4.84781 2.80157 4.61402 3.2007 4.72476L4.9044 5.19744C5.82129 5.45183 6.5469 6.15866 6.80003 7.07489L8.95106 14.8609L9.10935 15.4075C9.74249 15.6438 10.2863 16.0866 10.6314 16.6747L10.9414 16.579L19.8115 14.2739C20.2124 14.1697 20.6219 14.4102 20.7261 14.8111C20.8303 15.212 20.5897 15.6214 20.1888 15.7256L11.3515 18.0223L11.0228 18.1238C11.0161 19.3947 10.1392 20.5555 8.81236 20.9003C7.22189 21.3136 5.58709 20.3982 5.16092 18.8556C4.73476 17.313 5.67861 15.7274 7.26908 15.3141C7.3479 15.2936 7.42682 15.2764 7.5057 15.2623L5.35419 7.47433C5.24592 7.08242 4.92897 6.76092 4.50338 6.64284L2.79968 6.17016C2.40054 6.05942 2.16675 5.64608 2.27749 5.24694Z"
+                            fill="#A8DF8E"></path>
+                    </g>
+                </svg>
+                <h2>Fast Delivery</h2>
+                <p>Lightning-fast shipping to get your gear before the next game.</p>
+            </div>
+            <div class="point1">
+                <svg viewBox="0 0 20 20" width="100" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M11 5H19L17.1547 2.42858C16.9634 2.16232 16.6093 1.99879 16.2267 2.00001H11V5ZM9 2.00001H3.77333C3.39074 1.99879 3.03663 2.16232 2.84533 2.42858L1 5H9V2.00001ZM1 7V17.5C1 18.3284 1.67156 19 2.49997 19L8.5 19C9.5 19 10 18 10 18C10.0005 17.4658 10.0032 16.9327 10.0097 16.5C10.0097 12.9159 12.9234 10 16.5048 10H18C18 10 19 10 19 9V7H1ZM20 13C20 12.4477 19.5523 12 19 12C18.4477 12 18 12.4477 18 13V14C18 15.1046 17.1046 16 16 16H15.4142L15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929C15.3166 13.9024 14.6834 13.9024 14.2929 14.2929L12.2929 16.2929C11.9024 16.6834 11.9024 17.3166 12.2929 17.7071L14.2929 19.7071C14.6834 20.0976 15.3166 20.0976 15.7071 19.7071C16.0976 19.3166 16.0976 18.6834 15.7071 18.2929L15.4142 18H16C18.2091 18 20 16.2091 20 14V13Z"
+                            fill="#A8DF8E"></path>
+                    </g>
+                </svg>
+                <h2>Easy Returns</h2>
+                <p>Not the right fit? Enjoy our 30-day hassle-free return policy.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- section-5 sports thoughts-->
+
+    <section class="sec5" id="sec5">
+        <div class="sec5-main">
+            <div class="left-img">
+                <img src="/public/images/thought-img1.jpg" width="300" alt="Thought Image">
+            </div>
+            <div class="right-img">
+                <img src="/public/images/thought-img2.jpg" width="300" alt="Thought Image">
+            </div>
+            <div class="thought-tittle">
+                <h2>"The only bad workout is the one that didn't happen."</h2>
+                <svg fill="#A8DF8E" viewBox="0 0 16 16" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M.036 3A3.504 3.504 0 0 1 4 .036v2.049A1.506 1.506 0 0 0 2.085 3H6v6H0V3h.036zm15.928 7H16v6h-6v-6h3.915A1.496 1.496 0 0 0 12 9.086v-2.05A3.504 3.504 0 0 1 15.964 10zM14 12h-2v2h2v-2zM2 5v2h2V5H2z"
+                            fill-rule="evenodd"></path>
+                    </g>
+                </svg>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section-6 products cards  -->
+    <section class="sec6" id="sec6">
+        <h2>More From SportX</h2>
+        <div class="sec6-main">
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/shoe-2.jpg" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Nike Air Max 270</p>
+                    <span>price $25</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/bag-2.jpg" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Nike Heritage Bag</p>
+                    <span>$10</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/hoodie-2.jpg" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Essential Gray Hoodie</p>
+                    <span>$15</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/ball-3.jpg" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Premier League Match</p>
+                    <span>price $5</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/jersey-2.jpg" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Chelsea Away Kit</p>
+                    <span>price $20</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/watch-6.png" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Casio Digital G-7</p>
+                    <span>price $25</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/shoe-7.avif" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Adidas Ultraboost</p>
+                    <span>price $15</span>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-img">
+                    <img src="/public/images/watch-5.png" alt="product">
+                </div>
+                <div class="card-tittle">
+                    <p>Fossil Chronograph</p>
+                    <span>price $10</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="left">
+                <img src="/public/icones/sneaker.png" width="100" alt="Logo" class="logo">
+                <h2 style="color: black; font-size: 2.5em;">SportX.</h2>
+
+            </div>
+            <div class="right">
+                <div class="links">
+                    <h2>Shop</h2>
+                    <ul>
+                        <li><a href="#">Shoes</a></li>
+
+                        <li><a href="#">Jerseys</a></li>
+
+                        <li><a href="#">Accessories</a></li>
+
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+
+                        <li><a href="#">Shipping Policy</a></li>
+
+                        <li><a href="#">Help Center</a></li>
+
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@copyright sport X 2026</p>
+        </div>
+    </footer>
+
+    <!-- buy window show  -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <h2>Order Details</h2>
+            <div id="modal-product-info"></div>
+            <form id="orderForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Country" required>
+                <input type="number" placeholder="Age" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="Address" required>
+                <button type="submit" class="submit-btn">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Thank you screen  -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <h1>Thank You! 🎉</h1>
+            <p>Your order has been placed successfully.</p>
+            <button onclick="location.reload()" class="home-btn">Back to Home</button>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/product.js"></script>
+
+</body>
+
+</html>
