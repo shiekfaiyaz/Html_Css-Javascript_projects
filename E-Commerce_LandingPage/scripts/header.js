@@ -14,7 +14,6 @@ $(document).ready(function() {
         $('#mobileSidebar').toggleClass('active');
     });
 
-    // 3. Sidebar Link Click (Close sidebar after clicking link)
     $('.sidebar-menu ul li a').on('click', function() {
         $('#mobileSidebar').removeClass('active');
     });
@@ -22,14 +21,13 @@ $(document).ready(function() {
     // 4. Smooth Scroll (Clean jQuery way)
     function smoothScroll(trigger, targetId) {
         $(trigger).on('click', function(e) {
-            e.preventDefault(); // Default jump rokne ke liye
+            e.preventDefault(); 
             $('html, body').animate({
                 scrollTop: $(targetId).offset().top
-            }, 800); // 800ms for smooth effect
+            }, 800); 
         });
     }
 
-    // Saare buttons ko target karte hain
     smoothScroll('#jumpBtn', '#sec6');
     smoothScroll('.btn2', '#sec2');
     smoothScroll('.view-more', '#sec6');
