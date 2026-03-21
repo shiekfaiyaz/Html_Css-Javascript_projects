@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header>
+        <div class="logo">
+            <a href="/index.html">MyGallery</a>
+            <img src="public/images/logo.png" width="100" alt="logo">
+        </div>
+        <i class="fa-regular fa-floppy-disk savedImages"></i>
+    </header>
+
+    <!-- showing saved image window -->
+    <div class="saved-window">
+        <i class="fa-solid fa-x" style="color: rgb(99, 230, 190);"></i>
+        <div class="bg-overlay"></div>
+        <div class="img-window">
+
+
+        </div>
+    </div>
+
+
+    <!-- Image preview window  -->
+    <div class="preview-window">
+        <div class="overlay"></div>
+        <div class="preview-box">
+            <img id="preview-img">
+            <p id="preview-title"></p>
+            <i class="fa-solid fa-x close-preview"></i>
+        </div>
+    </div>
+
+    <!-- section1 text  -->
+    <section class="sec1">
+        <img src="public/images/hero-bg.jpg" width="300" alt="bg-image">
+        <div class="hero">
+            <div class="sec1-content">
+                <h2>The interactive image Gallery Html css Javascript</h2>
+                <p>find the image you like.the javasctiopt project with Apis calls </p>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="search" placeholder="Search Images" id="searchInput">
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Catagroes section container -->
+    <section class="sec2">
+        <!-- catagoies images container  -->
+        <div class="category-wrapper">
+            <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="images-types">
+                <div class="card1" data-category="Sports">
+                    <div class="img">
+                        <img src="public/images/item1.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Sports</h3>
+                </div>
+                <div class="card1" data-category="Fashion">
+                    <div class="img">
+                        <img src="public/images/item2.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Fashion</h3>
+                </div>
+                <div class="card1" data-category="Technology">
+                    <div class="img">
+                        <img src="public/images/item3.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Technology</h3>
+                </div>
+                <div class="card1" data-category="Nature">
+                    <div class="img">
+                        <img src="public/images/item4.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Nature</h3>
+                </div>
+                <div class="card1" data-category="Travel">
+                    <div class="img">
+                        <img src="public/images/item5.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Travel</h3>
+                </div>
+                <div class="card1" data-category="Food">
+                    <div class="img">
+                        <img src="public/images/item6.jpg" width="400" alt="categories Image">
+                    </div>
+                    <h3>Food</h3>
+                </div>
+
+            </div>
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- section 3 show images -->
+
+    <section class="sec3">
+        <div class="sec3-main">
+
+            <div class="gallery" id="gallery-id">
+                <div class="image-card" id="img-card">
+                    <img src="public/images/image1.jpg" class="big" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title-1</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image2.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title-2</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image3.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title-3</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image4.jpg" class="big" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image5.jpg" class="wide" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image6.jpg" class="big" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image7.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image8.jpg" class="wide" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image9.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image10.jpg" class="wide" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image11.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="public/images/image12.jpg" alt="gallery image">
+                    <div class="overlay">
+                        <span class="title">Image Title</span>
+                        <i class="fa-regular fa-heart heart-icon"></i>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <button id="loadMore">Load More</button>
+
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
