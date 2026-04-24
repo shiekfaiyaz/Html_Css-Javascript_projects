@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section class="main-sec">
+        <div class="main-background">
+
+            <!-- The rounded Numbers lins steps -->
+            <div class="numberLines">
+                <h3>Multi-Step Form with JavaScript</h3>
+                <div class="steps">
+                    <div class="rounded-num active">
+                        1
+                    </div>
+                    <div class="line"></div>
+                    <div class="rounded-num">
+                        2
+                    </div>
+                    <div class="line"></div>
+                    <div class="rounded-num">
+                        3
+                    </div>
+                    <div class="line"></div>
+                    <div class="rounded-num">
+                        4
+                    </div>
+                    <div class="line"></div>
+                    <div class="rounded-num">
+                        5
+                    </div>
+                </div>
+            </div>
+
+
+            <form id="step-form" action="">
+                <!-- Section 1 form  -->
+                <div class="main-sec1 active">
+                    <p class="error-mesg"></p>
+                    <div>
+                        <label for="">First Name</label>
+                        <input id="Fname"  type="text" placeholder="F Name..">
+                    </div>
+                    <div>
+                        <label for="">Last Name</label>
+                        <input id="Lname" type="text" placeholder="L Name..">
+                    </div>
+                    <div>
+                        <label for="">Age</label>
+                        <input id="age" type="text" placeholder="01/10/2000">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+
+                <!-- section 2 form -->
+                <div class="main-sec1">
+                     <p class="error-mesg"></p>
+                    <div>
+                        <label for="">Education Level:</label>
+                        <select id="Education" name="">
+                            <option value="">Select Education</option>
+                            <option value="School">School</option>
+                            <option value="College">College</option>
+                            <option value="Graduate">Graduate</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Field of Study:</label>
+                        <select id="fieldStudy" name="">
+                              <option value="">Select Study</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Business Intelligence Developer">Business Intelligence Developer</option>
+                            <option value="E-commerce Manager">E-commerce Manager</option>
+                            <option value="Software Developer / App Developer">Software Developer / App Developer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="skills-wrapper">
+                        <div id="tags-container"></div> <input type="text" id="skill-input"
+                            placeholder="Type skill (e.g. Java) and press Enter">
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn-prev">Back</button>
+                        <button type="button" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- section 3 cards with icons to select divs -->
+                <div class="main-sec1">
+                    <h2>Experience Level</h2>
+                         <p class="error-mesg"></p>
+                    <div class="card1">
+                        <img src="public/images/beginer.png" alt="">
+                        <h3>Beginner</h3>
+                    </div>
+                    <div class="card1">
+                        <img src="public/images/intermidate.png" alt="">
+                        <h3>Intermediate</h3>
+                    </div>
+                    <div class="card1">
+                        <img src="public/images/advance.png" alt="">
+                        <h3>Advanced</h3>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn-prev">Back</button>
+                        <button type="button" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- section 4  -->
+                <div class="main-sec1">
+                         <p class="error-mesg"></p>
+                    <label for="">Interests</label>
+                    <select id="interests" name="colors">
+                          <option value="">select Any</option>
+                          <option value="Web Dev">Web Dev</option>
+                          <option value="App Dev">App Dev</option>
+                        <option value="Coding">Coding</option>
+                        <option value="UI Design">UI Design</option>
+                        <option value="Games">Games</option>
+                        <option value="AI/ML">AI/ML</option>
+                        <option value="Cyber security">Cyber security</option>
+                    </select>
+                    <label for="">Project Type</label>
+                    <select id="projectType" name="colors">
+                          <option value="">select Any</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Freelance">Freelance</option>
+                        <option value="Practice">Practice</option>
+                    </select>
+                    <label for="">Availability</label>
+                    <select id="availability" name="">
+                          <option value="">select Any</option>
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Student">Student</option>
+                    </select>
+                    <div class="button-group">
+                        <button type="button" class="btn-prev">Back</button>
+                        <button type="button" class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <!-- section5 for cards  -->
+                <div class="main-sec1">
+                         <p class="error-mesg"></p>
+                    <h2>Goals</h2>
+                    <div class="card2">
+                        <img src="public/images/job.png" alt="">
+                        <h3>Get job</h3>
+                    </div>
+                    <div class="card2">
+                        <img src="public/images/portfolio.png" alt="">
+                        <h3>Build portfolio</h3>
+                    </div>
+                    <div class="card2">
+                        <img src="public/images/skill.png" alt="">
+                        <h3>Learn skills</h3>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn-prev">Back</button>
+                        <button type="button" class="btn-next">Next</button>
+                    </div>
+
+                </div>
+
+
+                <!-- Section 6 form Additional Notes (optional textarea) -->
+                <div class="main-sec1">
+                    <label for="">Additional Notes</label>
+                    <textarea name="message" id="">
+                 </textarea>
+                    <div class="button-group">
+                        <button type="button" class="btn-prev">Back</button>
+                        <button type="button" class="btn-submit">submit</button>
+                    </div>
+                </div>
+            </form>
+            <!-- backgound end containers -->
+        </div>
+    </section>
+
+
+
+    <!-- Home page shwoing  all Info and user can edit save it -->
+<section id="home-section" style="display: none;">
+    <div class="profile-card">
+        <div class="profile-header">
+            <h2>Hi, <span id="display-name">User</span>!</h2>
+            <p>Your Professional Summary</p>
+        </div>
+
+        <div id="data-container" class="data-container">
+            </div>
+
+        <div class="home-footer">
+            <button id="reset-form" class="btn-reset">Start New Form</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

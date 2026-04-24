@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-purple: #7c3aed;    /* Vibrant Purple */
+    --light-purple: #f5f3ff;      /* Light Lavender background */
+    --accent-purple: #c4b5fd;     /* Border/Accent */
+    --text-dark: #1e1b4b;         /* Dark Navy for text */
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-background {
+    background: var(--white);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.1);
+}
+
+/* Progress Bar Styles */
+.numberLines h3 {
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.rounded-num {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--accent-purple);
+    color: var(--primary-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* Active step color */
+.rounded-num.active {
+    background: var(--primary-purple);
+    color: var(--white);
+    border-color: var(--primary-purple);
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background: var(--accent-purple);
+}
+
+/* Form Card Sections */
+.main-sec1 {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Important: Pehle step ko dikhane ke liye */
+.main-sec1.active {
+    display: flex;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Inputs & Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-purple);
+    border-radius: 10px;
+    outline: none;
+    background: var(--light-purple);
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-purple);
+    background: var(--white);
+}
+
+/* Card Selection Styles (Section 3 & 5) */
+.card1 , .card2 {
+    border: 2px solid var(--light-purple);
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card1:hover {
+    border-color: var(--accent-purple);
+    background: var(--light-purple);
+}
+.card2:hover {
+    border-color: var(--accent-purple);
+    background: var(--light-purple);
+}
+
+.card1.selected , .card2.selected  {
+    border-color: var(--primary-purple);
+    background: var(--light-purple);
+    transform: scale(1.02);
+}
+
+
+
+
+.card1 img{
+    width: 100px;
+}
+.card2 img{
+    width: 100px;
+}
+
+
+/* Button Groups */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-next {
+    background: var(--primary-purple);
+    color: var(--white);
+}
+
+.btn-next:hover {
+    background: var(--primary-dark);
+    color: black;
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+    border: 1px solid var(--primary-purple);
+}
+
+.btn-prev {
+    background: var(--accent-purple);
+    color: var(--text-dark);
+}
+
+/* Skills Tags */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 2px dashed var(--accent-purple);
+    border-radius: 10px;
+}
+
+.tag {
+    background: var(--primary-purple);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error-border{
+    border: 1px solid red;
+
+}
+
+.error-mesg{
+    color: red;
+    
+}
+.valid-border{
+    border: 1px solid green;
+}
+
+.rounded-num .active{
+    background-color: var(--primary-purple);
+    transition: all 2s ease-in-out;
+}
+
+#tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fa-solid{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* profile data display home page */
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #b197fc;
+    transition: 0.3s;
+}
+
+.data-item:hover {
+    transform: translateX(5px);
+    background: #f1edff;
+}
+
+.data-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.edit-icon {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.btn-reset {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+body:has(#home-section[style*="display: block"]) .main-background {
+    background: transparent !important;
+    box-shadow: none !important;
+}
