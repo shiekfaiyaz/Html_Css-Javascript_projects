@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="expense-cotainer">
+        <div class="income">
+            <h2>Income Budget</h2>
+            <p class="income-num">0.000</p>
+        </div>
+        <div class="expense">
+            <h2>Expense</h2>
+            <p class="expense-num">0.000</p>
+        </div>
+        <div class="balance">
+            <h2>Balance</h2>
+            <p class="balance-num">0.000</p>
+        </div>
+    </div>
+
+    <div class="form">
+        <div class="budget-form">
+            <form action="">
+                <label for="">Budget</label>
+                <input type="text" id="budget" placeholder="Enter your total Budget">
+                <button  id="budget-btn" type="">Add Budget</button>
+            </form>
+        </div>
+        <div class="expense-form">
+            <form action="">
+                <label for="">Expense</label>
+                <input type="text" id="ex-tittle" placeholder="Enter expense Eg: Food ..." >
+                <input type="number" id="amount" placeholder="10">
+                <button id="expense-btn" type="">Enter Expense</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- display expense list  -->
+ <h3>Expense List Items</h3>
+<div class="list-container">
+    <!-- JS will automatically add .list elements here -->
+</div>
+
+<!--Chart to show graph  -->
+<canvas id="expenseChart"></canvas>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

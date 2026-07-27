@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Tic-tac-teo</title>
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div id="container">
+    <div id="container">
 
-       <header>
-           <h1>Tic-tac-toe</h1>
-       </header>
+        <header>
+            <h1>Tic-tac-toe</h1>
+        </header>
 
-       <button class="palybox1 activie" type="submit">X
+        <button class="palybox1 activie" type="button">X
+            <div class="score-1" id="scoreX">0</div>
+        </button>
 
+        <button class="palybox2" type="button">O
+            <div class="score-2" id="scoreO">0</div>
+        </button>
 
-           <div class="score-1">0</div>
+        <div id="infor">
+            <h5>Start Game - X's Turn</h5>
+        </div>
 
-       </button>
+        <div class="end-animat">
+            <div class="lineAnimat"></div>
+            <div class="maingame" id="maingame">
+                <div class="cell bt0 bl0" data-index="0"></div>
+                <div class="cell bt0" data-index="1"></div>
+                <div class="cell bt0 br0" data-index="2"></div>
+                <div class="cell bl0" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell br0" data-index="5"></div>
+                <div class="cell bb0 bl0" data-index="6"></div>
+                <div class="cell bb0" data-index="7"></div>
+                <div class="cell bb0 br0" data-index="8"></div>
+            </div>
+        </div>
 
-       <button class="palybox2 " type="submit">O
+        <div class="Reset-game">
+            <button id="Reset">Restart-Game</button>
+        </div>
+    </div>
 
-           <div class="score-2">0</div>
-       </button>
-
-
-       <div id="infor">
-           <h5>Start Game-Select Player</h5>
-       </div>
-       <div class="end-animat">
-           <div class="lineAnimat"></div>
-           <div class="maingame" id="maingame">
-
-               <div class="cell bt0 bl0"></div>
-               <div class="cell bt0"></div>
-               <div class="cell bt0 br0 " o></div>
-               <div class="cell bl0"></div>
-               <div class="cell"></div>
-               <div class="cell br0"></div>
-               <div class="cell bb0 bl0" o></div>
-               <div class="cell bb0"></div>
-               <div class="cell bb0 br0"></div>
-
-           </div>
-       </div>
-
-
-
-       <div class="Reset-game">
-           <button id="Reset">Restart-Game</button>
-       </div>
-   </div>
-
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>

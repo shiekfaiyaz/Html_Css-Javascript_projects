@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | WebXaction</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin<span>Panel</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-btn active" data-target="dashboard"><i class="fa-solid fa-house"></i>
+                    Dashboard</a>
+                <a href="#" class="nav-btn" data-target="users"><i class="fa-solid fa-user"></i> Profile</a>
+                <a href="#" class="nav-btn" data-target="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+                <a href="#" class="nav-btn" data-target="user-management"><i class="fa-solid fa-users-gear"></i> User
+                    Management</a>
+                <a href="#" class="nav-btn" data-target="revenue"><i class="fa-solid fa-truck-fast"></i>
+                    Revenue/Orders</a>
+                <a href="#" class="nav-btn" data-target="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+                <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Top Header Bar -->
+            <header class="top-nav">
+
+                <!-- Hamburger Button for Mobile -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search data...">
+                </div>
+                <div class="user-info">
+                    <span>Shaik Faiyaz</span>
+                    <img src="images/profile.jpg" width="40" height="40" alt="profile">
+                </div>
+            </header>
+
+            <!-- Overlay for Mobile Sidebar (Sidebar ke exact niche paste kar do) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+            <!-- SECTION 1: DASHBOARD MAIN -->
+            <section id="dashboard" class="content-section active">
+                <h1>Welcome Back, Shaik!</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-eye"></i>
+                        <div>
+                            <h3>1,250</h3>
+                            <p>Daily Views</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div>
+                            <h3>$5,400</h3>
+                            <p>Revenue</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <div>
+                            <h3>45</h3>
+                            <p>New Users</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: USER PROFILE -->
+            <section id="users" class="content-section">
+                <div class="card-box profile-card">
+                    <img src="images/profile.jpg" width="100" class="profile-img" alt="User Profile">
+                    <ul class="profile-details">
+                        <li><strong>Full Name:</strong> Shaik Faiyaz</li>
+                        <li><strong>Email:</strong> Abcz@gmail.com</li>
+                        <li><strong>Role:</strong> Admin</li>
+                        <li><strong>Status:</strong> <span class="badge badge-success"><span class="dot"></span>
+                                Active</span></li>
+                        <li><strong>Joined Date:</strong> 12 Jan 2026</li>
+                        <li><strong>Work:</strong> Upwork</li>
+                        <li><strong>City:</strong> Hyderabad, India</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 3: ANALYTICS -->
+            <section id="analytics" class="content-section">
+                <div class="analytics-header">
+                    <div class="date-range-container">
+                        <div class="date-field">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date">
+                        </div>
+                        <div class="date-field">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary"><i class="fa-solid fa-download"></i> Export PDF/CSV</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div>
+                            <p>Total Visitors</p>
+                            <h3>45.2K</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <p>Bounce Rate</p>
+                            <h3>32.4%</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <p>Avg. Session Duration</p>
+                            <h3>4m 12s</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <p>Conversion Rate</p>
+                            <h3>3.8%</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Traffic Analytics</h3>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Device Breakdown</h3>
+                        <canvas id="deviceChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: USER MANAGEMENT -->
+            <section id="user-management" class="content-section">
+                <div class="card-box">
+                    <h2>User Management</h2>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
+                                <th>Joined Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="User">
+                                    <div class="user-cell">
+                                        <img src="https://via.placeholder.com/30" alt="">
+                                        <span>Shaik Faiyaz</span>
+                                    </div>
+                                </td>
+                                <td data-label="Role"><span class="role-badge">Admin</span></td>
+                                <td data-label="Status"><span class="badge badge-success">Active</span></td>
+                                <td data-label="Last Active">2 hours ago</td>
+                                <td data-label="Joined Date">5 Jun 2026</td>
+                                <td data-label="Actions">
+                                    <button class="action-btn edit-btn"><i
+                                            class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 5: REVENUE & ORDERS -->
+            <section id="revenue" class="content-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div>
+                            <p>Total Revenue</p>
+                            <h3>$100,000.00</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <p>Total Orders</p>
+                            <h3>1,240</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <p>Average Order Value</p>
+                            <h3>$80.64</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-box" style="margin-top: 20px;">
+                    <h3>Recent Orders</h3>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer Name</th>
+                                <th>Date & Time</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-9821</td>
+                                <td>John Doe</td>
+                                <td>24 Jul, 10:30 AM</td>
+                                <td>$149.00</td>
+                                <td><button class="btn btn-secondary"><i class="fa-solid fa-eye"></i> View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 6: SETTINGS -->
+            <section id="settings" class="content-section">
+                <div class="card-box">
+                    <h3>Preferences</h3>
+                    <div class="setting-item">
+                        <span>Dark Mode</span>
+                        <button type="button" class="toggle-btn" id="darkModeToggle">Off</button>
+                    </div>
+                    <div class="setting-item">
+                        <span>Email Notifications</span>
+                        <button type="button" class="toggle-btn active" id="notifToggle">On</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- External Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

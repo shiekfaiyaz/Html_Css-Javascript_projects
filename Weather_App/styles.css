@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Simple Soft Gradient Background */
+.background {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.main-bg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* White Container */
+.main-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* Title Section */
+.tittle h2 {
+    font-size: 22px;
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.tittle p {
+    font-size: 13px;
+    color: #4834d4;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Date Time Section */
+.date-time h3 {
+    font-size: 14px;
+    color: #636e72;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Search Form */
+form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+form input[type="search"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #f8f9fa;
+    color: #2d3436;
+    transition: all 0.3s ease;
+}
+
+form input[type="search"]:focus {
+    border-color: #4834d4;
+    background: #ffffff;
+}
+
+form button[type="submit"] {
+    padding: 12px 18px;
+    background: #4834d4;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background: #301eab;
+}
+
+/* City Display */
+.city h3 {
+    font-size: 24px;
+    color: #2d3436;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Weather Icon Box */
+.weather-img {
+    background: #f1f2f6;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.weather-img img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.weather-img h2 {
+    font-size: 38px;
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.weather-msg {
+    font-size: 15px;
+    color: #636e72;
+    font-weight: 500;
+    margin-top: 2px;
+    text-transform: capitalize;
+}
+
+/* Wind Speed Section */
+.speed-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #dfe6e9;
+}
+
+.speed-msg img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.speed {
+    font-size: 14px;
+    color: #2d3436;
+    font-weight: 500;
+}

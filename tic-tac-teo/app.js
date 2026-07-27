@@ -1,16 +1,19 @@
+// DOM Elements
+const cells = document.querySelectorAll(".cell");
+const info = document.querySelector("#infor h5");
+const restartBtn = document.getElementById("Reset");
+const playerXBox = document.querySelector(".palybox1");
+const playerOBox = document.querySelector(".palybox2");
+const scoreXEl = document.getElementById("scoreX");
+const scoreOEl = document.getElementById("scoreO");
 
+// Game State Variables
+let currentPlayer = "X";
+let options = ["", "", "", "", "", "", "", "", ""];
+let isGameActive = true;
+let scoreX = 0;
+let scoreO = 0;
 
-//This is logic 2
-
-let PlayerX = "X";
-
-
-let maingame = document.querySelector('#maingame');
-let opstions = ["", "", "", "", "", "", "", "", ""];
-const element1 = document.querySelector(".palybox1");
-const element2 = document.querySelector(".palybox2");
-let info = document.querySelector("#infor");
-let restart = document.getElementById("Reset");
 const winCombinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -21,165 +24,105 @@ const winCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-const Cells = document.querySelectorAll(".cell");
-let gamestart = true;
 
-
-start();
-
-function start() {
-
-    gamestart = true;
-
-    Cells.forEach(Allcells => {
-        Allcells.addEventListener("click", handlers, { once: true });
-
+// Initialize Game
+function initGame() {
+    cells.forEach(cell => {
+        cell.addEventListener("click", handleCellClick);
     });
-
-    restart.addEventListener("click", Restartbtn);
+    restartBtn.addEventListener("click", restartGame);
 }
 
-function handlers(e) {
+// Handle Cell Clicks
+function handleCellClick(e) {
+    const cell = e.target;
+    const index = cell.getAttribute("data-index");
 
-    const Allcells = e.target;
-
-    const currentplayer = gamestart ? 'X' : 'O';
-    myturn(Allcells, currentplayer);
-
-    playerturn();
-
-    checkwin();
-    disablebtn();
-
-}
-
-function playerturn() {
-
-    gamestart = !gamestart;
-
-    if (gamestart) {
-
-        element1.classList.add("activie");
-        element2.classList.remove("activie");
-    } else {
-
-        element2.classList.add("activie");
-        element1.classList.remove("activie");
+    // Ignore click if cell already filled or game over
+    if (options[index] !== "" || !isGameActive) {
+        return;
     }
 
+    updateCell(cell, index);
+    checkResult();
 }
 
-
-function myturn(Allcells, currentplayer) {
-
-    Allcells.innerHTML = currentplayer;
-    Allcells.classList.add(currentplayer);
-    info.textContent = ` ${currentplayer}'s Turn!`;
-
+// Update Cell State
+function updateCell(cell, index) {
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+    cell.classList.add(currentPlayer);
 }
 
-function disablebtn() {
+// Switch Player Turns
+function switchPlayer() {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    info.textContent = `${currentPlayer}'s Turn!`;
 
-    let clicked = false;
-
-    Cells.forEach(Allcells => {
-        Allcells.addEventListener("click", function () {
-
-            if (!clicked) {
-                currentplayer = "X";
-                clicked = true;
-            } else {
-                currentplayer = "O";
-            }
-        });
-
-    });
-
+    if (currentPlayer === "X") {
+        playerXBox.classList.add("activie");
+        playerOBox.classList.remove("activie");
+    } else {
+        playerOBox.classList.add("activie");
+        playerXBox.classList.remove("activie");
+    }
 }
 
+// Check Win/Draw State
+function checkResult() {
+    let roundWon = false;
 
-function checkwin() {
-
-    let gamewin = false;
     for (let i = 0; i < winCombinations.length; i++) {
-        let condition = winCombinations[i];
-        let a = Cells[condition[0]].innerText;
-        let b = Cells[condition[1]].innerText;
-        let c = Cells[condition[2]].innerText;
-        if (a != "" && b != "" && c != "") {
-
-            if (a === b && b === c && c === a) {
-
-                info.textContent = ` ${a}'s wins!`;
-                gamewin = true;
-                break;
-            } 
-
+        const [a, b, c] = winCombinations[i];
+        if (options[a] && options[a] === options[b] && options[a] === options[c]) {
+            roundWon = true;
+            break;
         }
     }
 
+    if (roundWon) {
+        info.textContent = `Player ${currentPlayer} Wins! 🎉`;
+        isGameActive = false;
+        updateScore(currentPlayer);
+        return;
+    }
 
+    // Check for Draw
+    if (!options.includes("")) {
+        info.textContent = "Game Draw! 🤝";
+        isGameActive = false;
+        return;
+    }
+
+    switchPlayer();
 }
 
+// Update Scores
+function updateScore(winner) {
+    if (winner === "X") {
+        scoreX++;
+        scoreXEl.textContent = scoreX;
+    } else {
+        scoreO++;
+        scoreOEl.textContent = scoreO;
+    }
+}
 
+// Restart Game State
+function restartGame() {
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    isGameActive = true;
+    info.textContent = "Start Game - X's Turn";
 
-// function draw() {
-//    for (let i = 0; i < winCombinations.length; i++) {
-//       for (let j = 0; j < winCombinations[i].length; j++) {
-//         console.log(winCombinations[i][j]);
-//       } 
-//       if(!maingame == "" && !gamestart){
+    playerXBox.classList.add("activie");
+    playerOBox.classList.remove("activie");
 
-//         console.log("draw");
-
-//       }
-
-//     }
-
-//   }
-
-
-
-function Draw() {
-
-    Cells.forEach(Allcells => {
-        Allcells.addEventListener("click", handlers, { once: true });
-
+    cells.forEach(cell => {
+        cell.textContent = "";
+        cell.classList.remove("X", "O");
     });
-
-     if(!gamewin){
-        console.log("draw")
-     }
-
-
 }
 
-
-
-//line Animastion 
-function lineAni() {
-
-
-}
-
-
-
-
-
-function Restartbtn() {
-    console.log("restart");
-    currentplayer = "X";
-    restart.addEventListener('click', () => {
-        let cells = document.querySelectorAll('.cell');
-        cells.forEach(e => {
-            e.innerText = "";
-        }); gamestart = false;
-        info.textContent = ` ${currentplayer}'s Turn!`;
-
-    });
-
-}
-
-
-
-
+// Start Game
+initGame();
